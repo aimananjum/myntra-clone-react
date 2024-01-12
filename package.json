@@ -1,7 +1,7 @@
 {
-  "homepage": "https://github.com/aimananjum/myntra-clone-react.git",
+  "homepage": "https://aimananjum.github.io/myntra-clone-react.git",
   "name": "myntra-clone-react",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

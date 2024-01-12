@@ -8,15 +8,15 @@ import Home from "./components/Home.jsx";
 import Bag from "./components/Bag.jsx";
 const router = createBrowserRouter([
   {
-    path: "https://aimananjum.github.io/myntra-clone-react/",
+    path: "myntra-clone-react/",
     element: <App />,
     children: [
       {
-        path: "https://aimananjum.github.io/myntra-clone-react/",
+        path: "myntra-clone-react/",
         element: <Home />,
       },
       {
-        path: "https://aimananjum.github.io/myntra-clone-react/bag",
+        path: "myntra-clone-react/bag",
         element: <Bag />,
       },
     ],

@@ -6,17 +6,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Bag from "./components/Bag.jsx";
+
+const basename = "/myntra-clone-react";
+
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: basename + "/",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: basename + "/",
         element: <Home />,
       },
       {
-        path: "/bag",
+        path: basename + "/bag",
         element: <Bag />,
       },
     ],

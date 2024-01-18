@@ -168,10 +168,10 @@ const ItemDetails = () => {
                 </p>
                 <hr />
                 <p>
-                  Sleeve Styling <br />{" "}
+                  Sleeve Styling <br />
                   <span className="s-list">Regular Sleeves</span>
                 </p>
-                <hr />{" "}
+                <hr />
                 <p>
                   Wash Care
                   <br /> <span className="s-list">Machine Wash</span>

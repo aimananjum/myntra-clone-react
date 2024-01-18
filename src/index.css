@@ -390,10 +390,11 @@ a.action_container:link {
   width: 55%;
   display: block;
   margin: 0px 0 30px 30px;
+  text-align: center;
 }
 .left-container img {
-  width: 400px;
-  height: 550px;
+  width: 300px;
+  height: 400px;
   margin: 0 10px 10px 0;
 }
 .right-container {

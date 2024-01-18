@@ -1,4 +1,5 @@
 import { useMyntra } from "../store/items-list-store";
+import { Link } from "react-router-dom";
 
 const HomeItem = ({ item }) => {
   const { bagItemsList, addItem, deleteItem } = useMyntra();
@@ -19,7 +20,10 @@ const HomeItem = ({ item }) => {
 
   return (
     <div className="item-container">
-      <img className="item-image" src={item.image} alt="item image" />
+      <Link to={`/myntra-clone-react/item-details/${item.id}`}>
+        <img className="item-image" src={item.image} alt="item image" />
+      </Link>
+
       <div className="rating">
         {item.rating.stars} ⭐ | {item.rating.count}
       </div>

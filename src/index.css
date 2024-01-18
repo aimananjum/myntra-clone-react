@@ -381,3 +381,226 @@ a.action_container:link {
 .spinner {
   margin: 100px 0px;
 }
+.parent-container {
+  width: 100%;
+  display: flex;
+  margin: 30px 0px;
+}
+.left-container {
+  width: 55%;
+  display: block;
+  margin: 0px 0 30px 30px;
+}
+.left-container img {
+  width: 400px;
+  height: 550px;
+  margin: 0 10px 10px 0;
+}
+.right-container {
+  width: 35%;
+  margin: 0px 10px 30px 30px;
+}
+
+.rating1 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #535766;
+}
+.innerdiv {
+  border: 1px solid #c7c7c7;
+  border-radius: 4px;
+  width: 180px;
+  padding: 0 5px;
+}
+.company-name1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: #282c3f;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item-name1 {
+  color: #535766;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  display: block;
+}
+.price1 {
+  margin-top: 30px;
+  font-size: 30px;
+  line-height: 15px;
+  color: #282c3f;
+  white-space: nowrap;
+}
+.current-price1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #282c3f;
+}
+.original-price1 {
+  text-decoration: line-through;
+  color: #7e818c;
+  font-weight: 400;
+  margin-left: 10px;
+  font-size: 25px;
+}
+.discount1 {
+  color: #ff905a;
+  font-weight: 400;
+  font-size: 25px;
+  margin-left: 10px;
+}
+.tax {
+  font-family: Roboto;
+  color: #03a685;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+.size-div {
+  margin: 30px 0px;
+  color: #282c3f;
+}
+.options {
+  display: flex;
+}
+.size-title {
+  color: #282c3f;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  display: block;
+}
+.op {
+  border: 1px solid #7e818c;
+  width: 55px;
+  height: 55px;
+  color: #282c3f;
+  font-size: 12px;
+  font-weight: 900;
+  margin: 10px 15px 10px 0;
+  background-color: white;
+}
+
+.button-div {
+  margin: 10px 0px;
+  display: flex;
+  width: 90%;
+}
+.add-to-bag-btn {
+  width: 60%;
+  background-color: rgb(255, 63, 108);
+  border: none;
+  color: white;
+  margin-right: 20px;
+  padding: 20px 50px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.btn-icon {
+  margin: 0 0px;
+}
+
+.wishlist-btn {
+  width: 40%;
+  background-color: white;
+  border: 1px solid #7e818c;
+  color: grey;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+button span {
+  padding: 0px 10px;
+}
+
+.delivery-options {
+  margin: 30px 0px;
+}
+.delivery-heading {
+  font-size: 18px;
+  font-weight: 700;
+}
+.delivery-heading span {
+  padding: 0 10px;
+}
+
+.delivery-address {
+  margin: 10px 0;
+}
+.del-name {
+  font-size: 16px;
+  font-weight: 700;
+  width: 60%;
+  border: 1px solid #7e818c;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 5px;
+}
+.del-name button {
+  background-color: white;
+  color: #f54e77;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+.all-options {
+  width: 90%;
+  font-size: 20px;
+  font-weight: 700;
+  color: #3e4152;
+  font-size: 20px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.option1 {
+  margin: 25px 0;
+}
+.option1 span {
+  padding: 0px 20px;
+}
+.product-details {
+  margin: 30px 0px;
+}
+.s-heading {
+  color: #282c3f;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  display: block;
+}
+.p-description {
+  width: 40%;
+}
+.specifications {
+  margin: 30px 0px;
+}
+.s-heading {
+  margin: 20px 0px;
+}
+.s-list {
+  font-size: 20px;
+  color: #696b79;
+}
+.col {
+  font-size: 12px;
+}

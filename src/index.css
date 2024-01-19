@@ -58,11 +58,11 @@ header {
   box-sizing: content-box;
   height: 20px;
   padding: 10px;
-
   background-color: #f5f5f6;
   color: #282c3f;
-  font-weight: 300;
+  font-weight: 500;
   border-radius: 4px 0 0 4px;
+  font-size: 15px;
 }
 .search_input {
   color: #696e79;
@@ -761,4 +761,7 @@ button span {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.search_input:focus {
+  outline: none;
 }

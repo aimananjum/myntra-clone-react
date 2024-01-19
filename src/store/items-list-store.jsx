@@ -9,12 +9,15 @@ export const MyntraContext = createContext({
   deleteItem: () => {},
   addWishlist: () => {},
   removeFromWishlist: () => {},
+  search: "",
+  setSearch: () => {},
 });
 
 const MyntraProvider = ({ children }) => {
   const [itemsList, setItemsList] = useState(DEFAULT_ITEMS);
   const [bagItemsList, setBagItemsList] = useState([]);
   const [wishlistItemsList, setWishlistItemsList] = useState([]);
+  const [search, setSearch] = useState("");
 
   const addItem = (item) => {
     // Add item to bag
@@ -42,10 +45,12 @@ const MyntraProvider = ({ children }) => {
         itemsList,
         wishlistItemsList,
         bagItemsList,
+        search,
         addItem,
         deleteItem,
         addWishlist,
         removeFromWishlist,
+        setSearch,
       }}
     >
       {children}

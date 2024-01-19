@@ -7,7 +7,7 @@ import { useMyntra } from "../store/items-list-store";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const { bagItemsList } = useMyntra();
+  const { bagItemsList, setSearch } = useMyntra();
 
   return (
     <header>
@@ -30,6 +30,7 @@ const Header = () => {
           Studio <sup>New</sup>
         </Link>
       </nav>
+
       <div className="search_bar">
         <span className="material-symbols-outlined search_icon">
           <IoSearch />
@@ -37,13 +38,15 @@ const Header = () => {
         <input
           className="search_input"
           placeholder="Search for products, brands and more"
+          onChange={(event) => setSearch(event.target.value)}
         />
       </div>
+
       <div className="action_bar">
         <div className="action_container dropdown">
           <IoPersonSharp />
           <span className="action_name">Profile</span>
-          <div class="dropdown-content">
+          <div className="dropdown-content">
             <p>Hello Aiman</p>
             <p>6574834848</p>
             <hr />

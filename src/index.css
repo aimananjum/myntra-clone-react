@@ -147,22 +147,25 @@ header {
 }
 
 .items-container {
-  width: 80%;
-  margin: 40px 10%;
+  width: 95%;
+  margin: 40px 40px;
 }
 .item-container {
   width: 250px;
   margin: 10px;
+  margin-bottom: 80px;
 }
 .item-image {
   width: 100%;
+  opacity: 1;
+  transition: 0.5s ease;
 }
 .rating {
   font-size: 12px;
   font-weight: 700;
 }
 .company-name {
-  margin-top: 15px;
+  margin-top: 5px;
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
@@ -209,7 +212,7 @@ header {
   font-size: 12px;
   margin-left: 5px;
 }
-.btn-add-bag {
+/* .btn-add-bag {
   margin-top: 8px;
   font-size: 18px;
   width: 100%;
@@ -218,7 +221,7 @@ header {
   padding: 5px 15px;
   border-radius: 10px;
   cursor: pointer;
-}
+} */
 .bag-item-count {
   background-color: #f16565;
   white-space: nowrap;
@@ -605,3 +608,117 @@ button span {
 .col {
   font-size: 12px;
 }
+.wishlist-container {
+  position: relative;
+  text-align: center;
+  color: #696b79;
+}
+
+/* Top right text */
+.wishlist-top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background-color: #0202028e;
+  padding: 1px 3px;
+  border-radius: 1px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.move-to-bag {
+  margin-top: 8px;
+  font-size: 12px;
+  width: 100%;
+  font-weight: 700;
+  border: 1px solid #eaeaec;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: white;
+  color: #f54e77;
+  position: absolute;
+  z-index: 2;
+}
+.moved-to-bag {
+  margin-top: 8px;
+  font-size: 12px;
+  width: 100%;
+  font-weight: 700;
+  border: 1px solid #eaeaec;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #f54e77;
+  color: white;
+  position: absolute;
+  z-index: 2;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  background-color: #ffffff67;
+  padding: 3px;
+  border-radius: 2px;
+  color: #282c3f;
+}
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background-color: #05050515;
+  padding: 3px 7px;
+  border-radius: 1px;
+  color: white;
+  cursor: pointer;
+}
+.item-container {
+  position: relative;
+}
+
+.link-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Set a higher z-index than the heart icon */
+}
+
+.wishlist-container {
+  position: relative;
+}
+
+.wishlist-container .top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2; /* Ensure the heart icon is above the link overlay */
+}
+
+.item-container {
+  position: relative;
+}
+
+.link-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Set a higher z-index than the delete icon */
+}
+
+.wishlist-container {
+  position: relative;
+}
+
+.wishlist-container .wishlist-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2; /* Ensure the delete icon is above the link overlay */
+}
+/* .paddingbtm {
+  margin-bottom: 80px;
+} */

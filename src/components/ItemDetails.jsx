@@ -16,7 +16,24 @@ const ItemDetails = () => {
   }
 
   var item = itemsList.find(finditem);
-  console.log(item);
+  const { bagItemsList, addItem, wishlistItemsList, addWishlist } = useMyntra();
+
+  const isItemInBag = bagItemsList.some((bagItem) => bagItem.id === item.id);
+  const handleAddToBag = () => {
+    if (!isItemInBag) {
+      addItem(item);
+    }
+  };
+
+  const isItemInWishlist = wishlistItemsList.some(
+    (wishlistItem) => wishlistItem.id === item.id
+  );
+  const handleAddToWishlist = () => {
+    if (!isItemInWishlist) {
+      addWishlist(item);
+    }
+  };
+
   return (
     <div className="parent-container">
       <div className="left-container">
@@ -55,11 +72,11 @@ const ItemDetails = () => {
         </div>
 
         <div className="button-div">
-          <button className="add-to-bag-btn">
+          <button className="add-to-bag-btn" onClick={handleAddToBag}>
             <FaShoppingCart />
             <span>ADD TO BAG</span>
           </button>
-          <button className="wishlist-btn">
+          <button className="wishlist-btn" onClick={handleAddToWishlist}>
             <FaRegHeart />
             <span> WISHLIST</span>
           </button>

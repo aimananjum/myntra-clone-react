@@ -4,17 +4,24 @@ import { DEFAULT_ITEMS } from "../../data/items";
 export const MyntraContext = createContext({
   itemsList: [],
   bagItemsList: [],
+  wishlistItemsList: [],
   addItem: () => {},
   deleteItem: () => {},
+  addWishlist: () => {},
+  removeFromWishlist: () => {},
 });
 
 const MyntraProvider = ({ children }) => {
   const [itemsList, setItemsList] = useState(DEFAULT_ITEMS);
   const [bagItemsList, setBagItemsList] = useState([]);
+  const [wishlistItemsList, setWishlistItemsList] = useState([]);
 
   const addItem = (item) => {
     // Add item to bag
     setBagItemsList((prevBagItems) => [...prevBagItems, item]);
+  };
+  const addWishlist = (item) => {
+    setWishlistItemsList((prevWishlistItems) => [item, ...prevWishlistItems]);
   };
 
   const deleteItem = (itemId) => {
@@ -23,10 +30,23 @@ const MyntraProvider = ({ children }) => {
       prevBagItems.filter((item) => item.id !== itemId)
     );
   };
+  const removeFromWishlist = (itemId) => {
+    setWishlistItemsList((prevWishlistItems) =>
+      prevWishlistItems.filter((item) => item.id !== itemId)
+    );
+  };
 
   return (
     <MyntraContext.Provider
-      value={{ itemsList, bagItemsList, addItem, deleteItem }}
+      value={{
+        itemsList,
+        wishlistItemsList,
+        bagItemsList,
+        addItem,
+        deleteItem,
+        addWishlist,
+        removeFromWishlist,
+      }}
     >
       {children}
     </MyntraContext.Provider>

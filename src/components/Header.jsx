@@ -45,10 +45,10 @@ const Header = () => {
           <span className="action_name">Profile</span>
         </div>
 
-        <div className="action_container">
+        <Link className="action_container" to="/myntra-clone-react/wishlist">
           <FaHeart />
           <span className="action_name">Wishlist</span>
-        </div>
+        </Link>
 
         <Link className="action_container" to="/myntra-clone-react/bag">
           <FaShoppingCart />

@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Bag from "./components/Bag.jsx";
 import ItemDetails from "./components/ItemDetails.jsx";
+import Wishlist from "./components/Wishlist.jsx";
 
 const basename = "/myntra-clone-react";
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: basename + "/item-details/:id",
         element: <ItemDetails />,
+      },
+      {
+        path: basename + "/wishlist",
+        element: <Wishlist />,
       },
     ],
   },

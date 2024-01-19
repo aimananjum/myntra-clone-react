@@ -21,12 +21,12 @@ const Header = () => {
         </Link>
       </div>
       <nav className="nav_bar">
-        <Link to="/">Men</Link>
-        <Link to="/">Women</Link>
-        <Link to="/">Kids</Link>
-        <Link to="/">Home & Living</Link>
-        <Link to="/">Beauty</Link>
-        <Link to="/">
+        <Link to="/myntra-clone-react/">Men</Link>
+        <Link to="/myntra-clone-react/">Women</Link>
+        <Link to="/myntra-clone-react/">Kids</Link>
+        <Link to="/myntra-clone-react/">Home & Living</Link>
+        <Link to="/myntra-clone-react/">Beauty</Link>
+        <Link to="/myntra-clone-react/">
           Studio <sup>New</sup>
         </Link>
       </nav>
@@ -40,9 +40,28 @@ const Header = () => {
         />
       </div>
       <div className="action_bar">
-        <div className="action_container">
+        <div className="action_container dropdown">
           <IoPersonSharp />
           <span className="action_name">Profile</span>
+          <div class="dropdown-content">
+            <p>Hello Aiman</p>
+            <p>6574834848</p>
+            <hr />
+            <p>Orders</p>
+            <p>Wishlist</p>
+            <p>Gift Cards</p>
+            <p>Contact Us</p>
+            <p>Myntra InsiderNew</p>
+            <hr />
+            <p>Myntra Credit</p>
+            <p>Coupons</p>
+            <p>Saved Cards</p>
+            <p>Saved VPA</p>
+            <p>Saved Addresses</p>
+            <hr />
+            <p>Edit Profile</p>
+            <p>Logout</p>
+          </div>
         </div>
 
         <Link className="action_container" to="/myntra-clone-react/wishlist">

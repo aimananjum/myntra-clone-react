@@ -1,6 +1,7 @@
 import { useMyntra } from "../store/items-list-store";
 import { Link } from "react-router-dom";
 import { TiDeleteOutline } from "react-icons/ti";
+import { IoStar } from "react-icons/io5";
 
 const WishlistItem = ({ item }) => {
   const { bagItemsList, wishlistItemsList, addItem, removeFromWishlist } =
@@ -42,7 +43,8 @@ const WishlistItem = ({ item }) => {
         </div>
         <div className="bottom-left">
           <div className="rating">
-            {item.rating.stars} ⭐ | {item.rating.count}
+            {item.rating.stars} <IoStar className="star" /> |{" "}
+            {item.rating.count}
           </div>
         </div>
       </div>

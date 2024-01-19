@@ -1,5 +1,6 @@
 import { useMyntra } from "../store/items-list-store";
 import { Link } from "react-router-dom";
+import { IoStar } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 
 const HomeItem = ({ item }) => {
@@ -52,7 +53,7 @@ const HomeItem = ({ item }) => {
 
         <div className="bottom-left">
           <div className="rating">
-            {item.rating.stars} ⭐ | {item.rating.count}
+            {item.rating.stars} <IoStar className="star" /> |{item.rating.count}
           </div>
         </div>
         <div

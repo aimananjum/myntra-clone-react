@@ -1,7 +1,7 @@
-import HomeItem from "../components/HomeItem";
+import HomeItem from "./HomeItem";
 import { useMyntra } from "../store/items-list-store";
 
-const MensCategory = () => {
+const WomenCategory = () => {
   const { itemsList, search } = useMyntra();
   console.log(itemsList);
   return (
@@ -9,7 +9,7 @@ const MensCategory = () => {
       <div className="items-container">
         {itemsList
           .filter((item) => {
-            return item.category === "men";
+            return item.category === "women";
           })
           .map((item) => (
             <HomeItem key={item.id} item={item} />
@@ -18,4 +18,4 @@ const MensCategory = () => {
     </main>
   );
 };
-export default MensCategory;
+export default WomenCategory;

@@ -135,7 +135,7 @@ export const DEFAULT_ITEMS = [
     },
     {
         id: '009',
-        image: 'images/1.png',
+        image: 'images/9.png',
         company: 'Roadster',
         item_name: 'Men Cotton Pure Cotton T-shirt',
         original_price: 1045,

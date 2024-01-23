@@ -21,7 +21,7 @@ const Header = () => {
         </Link>
       </div>
       <nav className="nav_bar">
-        <Link to="/myntra-clone-react/">Men</Link>
+        <Link to="/myntra-clone-react/mens">Men</Link>
         <Link to="/myntra-clone-react/">Women</Link>
         <Link to="/myntra-clone-react/">Kids</Link>
         <Link to="/myntra-clone-react/">Home & Living</Link>

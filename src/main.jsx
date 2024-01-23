@@ -8,6 +8,7 @@ import Home from "./components/Home.jsx";
 import Bag from "./components/Bag.jsx";
 import ItemDetails from "./components/ItemDetails.jsx";
 import Wishlist from "./components/Wishlist.jsx";
+import MensCategory from "./components/MensCategory.jsx";
 
 const basename = "/myntra-clone-react";
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: basename + "/wishlist",
         element: <Wishlist />,
+      },
+      {
+        path: basename + "/mens",
+        element: <MensCategory />,
       },
     ],
   },

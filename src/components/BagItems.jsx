@@ -1,9 +1,11 @@
 import { useMyntra } from "../store/items-list-store";
+import { toast } from "react-toastify";
 const BagItems = ({ item }) => {
   const { deleteItem } = useMyntra();
   const removeFromBag = () => {
     deleteItem(item.id);
   };
+  const notify = (msg) => toast(msg, { className: "toast-message" });
   return (
     <div className="bag-item-container">
       <div className="item-left-part">
@@ -29,7 +31,13 @@ const BagItems = ({ item }) => {
         </div>
       </div>
 
-      <div className="remove-from-cart" onClick={removeFromBag}>
+      <div
+        className="remove-from-cart"
+        onClick={() => {
+          removeFromBag();
+          notify("Deleted!");
+        }}
+      >
         X
       </div>
     </div>

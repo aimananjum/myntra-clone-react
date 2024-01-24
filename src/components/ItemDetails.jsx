@@ -7,6 +7,7 @@ import { FcApproval } from "react-icons/fc";
 import { FaTruckFast } from "react-icons/fa6";
 import { BsCashCoin } from "react-icons/bs";
 import { FaExchangeAlt } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const ItemDetails = () => {
   const { itemsList } = useMyntra();
@@ -33,6 +34,7 @@ const ItemDetails = () => {
       addWishlist(item);
     }
   };
+  const notify = (msg) => toast(msg, { className: "toast-message" });
 
   return (
     <div className="parent-container">
@@ -72,11 +74,23 @@ const ItemDetails = () => {
         </div>
 
         <div className="button-div">
-          <button className="add-to-bag-btn" onClick={handleAddToBag}>
+          <button
+            className="add-to-bag-btn"
+            onClick={() => {
+              handleAddToBag();
+              notify("Added to bag");
+            }}
+          >
             <FaShoppingCart />
             <span>ADD TO BAG</span>
           </button>
-          <button className="wishlist-btn" onClick={handleAddToWishlist}>
+          <button
+            className="wishlist-btn"
+            onClick={() => {
+              handleAddToWishlist();
+              !isItemInWishlist && notify("Wishlisted");
+            }}
+          >
             <FaRegHeart />
             <span> WISHLIST</span>
           </button>

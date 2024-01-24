@@ -2,6 +2,7 @@ import { useMyntra } from "../store/items-list-store";
 import { Link } from "react-router-dom";
 import { TiDeleteOutline } from "react-icons/ti";
 import { IoStar } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 const WishlistItem = ({ item }) => {
   const { bagItemsList, wishlistItemsList, addItem, removeFromWishlist } =
@@ -23,7 +24,7 @@ const WishlistItem = ({ item }) => {
     event.preventDefault();
     event.stopPropagation();
   };
-
+  const notify = (msg) => toast(msg, { className: "toast-message" });
   return (
     <div className="item-container paddingbtm">
       <Link
@@ -37,7 +38,10 @@ const WishlistItem = ({ item }) => {
         <img className="item-image" src={item.image} alt="item image" />
         <div
           className="wishlist-top-right"
-          onClick={(event) => handleRemoveFromWishlist(event)}
+          onClick={(event) => {
+            handleRemoveFromWishlist(event);
+            notify("Removed!");
+          }}
         >
           <TiDeleteOutline />
         </div>
@@ -62,7 +66,14 @@ const WishlistItem = ({ item }) => {
           MOVED TO BAG
         </button>
       ) : (
-        <button type="button" className="move-to-bag" onClick={handleAddToBag}>
+        <button
+          type="button"
+          className="move-to-bag"
+          onClick={() => {
+            handleAddToBag();
+            notify("Moved!");
+          }}
+        >
           MOVE TO BAG
         </button>
       )}

@@ -516,6 +516,7 @@ a.action_container:link {
   font-weight: 700;
   border-radius: 5px;
 }
+
 .btn-icon {
   margin: 0 0px;
 }
@@ -764,4 +765,14 @@ button span {
 }
 .search_input:focus {
   outline: none;
+}
+
+.toast-message {
+  background: #535766;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+}
+.notify {
+  z-index: 3;
 }

@@ -6,12 +6,12 @@ import { IoSearch } from "react-icons/io5";
 import { useMyntra } from "../store/items-list-store";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ progress, setProgress }) => {
   const { bagItemsList, setSearch } = useMyntra();
 
   return (
     <header>
-      <div className="logo_container">
+      <div className="logo_container" onClick={() => setProgress(100)}>
         <Link to="/myntra-clone-react/">
           <img
             className="myntra_home"
@@ -20,7 +20,7 @@ const Header = () => {
           />
         </Link>
       </div>
-      <nav className="nav_bar">
+      <nav className="nav_bar" onClick={() => setProgress(100)}>
         <Link to="/myntra-clone-react/mens">Men</Link>
         <Link to="/myntra-clone-react/womens">Women</Link>
         <Link to="/myntra-clone-react/">Kids</Link>
@@ -67,12 +67,20 @@ const Header = () => {
           </div>
         </div>
 
-        <Link className="action_container" to="/myntra-clone-react/wishlist">
+        <Link
+          className="action_container"
+          to="/myntra-clone-react/wishlist"
+          onClick={() => setProgress(100)}
+        >
           <FaHeart />
           <span className="action_name">Wishlist</span>
         </Link>
 
-        <Link className="action_container" to="/myntra-clone-react/bag">
+        <Link
+          className="action_container"
+          to="/myntra-clone-react/bag"
+          onClick={() => setProgress(100)}
+        >
           <FaShoppingCart />
           <span className="action_name">Bag</span>
           <span className="bag-item-count">{bagItemsList.length}</span>

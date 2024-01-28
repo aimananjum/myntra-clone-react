@@ -771,8 +771,5 @@ button span {
   background: #535766;
   color: #fff;
   font-size: 14px;
-  font-weight: 800;
-}
-.notify {
-  z-index: 3;
+  font-weight: 600;
 }

@@ -2,7 +2,7 @@ import { useMyntra } from "../store/items-list-store";
 import { Link } from "react-router-dom";
 import { IoStar } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const HomeItem = ({ item }) => {

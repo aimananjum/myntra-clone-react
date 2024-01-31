@@ -10,6 +10,7 @@ import ItemDetails from "./components/ItemDetails.jsx";
 import Wishlist from "./components/Wishlist.jsx";
 import MensCategory from "./components/MensCategory.jsx";
 import WomenCategory from "./components/WomenCategory.jsx";
+import LoginSignup from "./components/LoginSignup.jsx";
 
 const basename = "/myntra-clone-react";
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         element: <WomenCategory />,
       },
     ],
+  },
+  {
+    path: basename + "/login-signup",
+    element: <LoginSignup />,
   },
 ]);
 

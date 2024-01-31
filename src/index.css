@@ -773,3 +773,63 @@ button span {
   font-size: 14px;
   font-weight: 600;
 }
+.login-signup-container {
+  width: 100%;
+  height: 88vh;
+  background-color: rgb(248, 226, 229);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container {
+  width: 29%;
+  height: 90%;
+  background-color: white;
+}
+.discount-img {
+  width: 100%;
+}
+.login-signup-form {
+  padding: 40px 30px;
+}
+.form-heading {
+  font-size: 20px;
+  color: #3e4152;
+}
+
+.phone {
+  width: 100%;
+  margin: 25px 0;
+  padding: 10px 5px;
+  font-size: 12px;
+  color: #696e79;
+  outline: none;
+}
+.terms-and-privacy {
+  width: 100%;
+  font-size: 12px;
+  color: #535766;
+}
+.links {
+  color: #f54e77;
+  text-decoration: none;
+  font-weight: 700;
+}
+.login-btn {
+  margin-top: 8px;
+  font-size: 12px;
+  width: 100%;
+  font-weight: 700;
+  border: 1px solid #eaeaec;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #f54e77;
+  color: white;
+  margin: 20px 0px;
+}
+
+.help {
+  font-size: 12px;
+  color: #535766;
+  margin: 10px 0;
+}

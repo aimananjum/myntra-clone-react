@@ -1,12 +1,14 @@
 import { useMyntra } from "../store/items-list-store";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoStar } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LoginSignup from "./LoginSignup";
 
 const HomeItem = ({ item }) => {
   const notify = (msg) => toast(msg, { className: "toast-message" });
+  const navigate = useNavigate();
   const {
     bagItemsList,
     wishlistItemsList,
@@ -14,11 +16,17 @@ const HomeItem = ({ item }) => {
     deleteItem,
     addWishlist,
     removeFromWishlist,
+    session,
   } = useMyntra();
 
   const isItemInBag = bagItemsList.some((bagItem) => bagItem.id === item.id);
 
   const handleAddToBag = () => {
+    if (!session) {
+      console.log(session);
+      navigate("/myntra-clone-react/login-signup");
+      return;
+    }
     if (!isItemInBag) {
       addItem(item);
     }
@@ -89,7 +97,7 @@ const HomeItem = ({ item }) => {
             className="move-to-bag"
             onClick={() => {
               handleAddToBag();
-              notify("Added to bag");
+              session ? notify("Added to bag") : "";
             }}
           >
             ADD TO BAG

@@ -43,11 +43,11 @@ const router = createBrowserRouter([
         path: basename + "/womens",
         element: <WomenCategory />,
       },
+      {
+        path: basename + "/login-signup",
+        element: <LoginSignup />,
+      },
     ],
-  },
-  {
-    path: basename + "/login-signup",
-    element: <LoginSignup />,
   },
 ]);
 

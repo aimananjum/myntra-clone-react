@@ -833,3 +833,19 @@ button span {
   color: #535766;
   margin: 10px 0;
 }
+
+.user-details {
+  display: flex;
+  justify-content: space-between;
+}
+.user-details .button-for-login {
+  font-size: 12px;
+  width: 50%;
+  font-weight: 700;
+  border: 1px solid #eaeaec;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: white;
+  color: #f54e77;
+  text-decoration: none;
+}

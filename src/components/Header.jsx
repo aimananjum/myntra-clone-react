@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { useMyntra } from "../store/items-list-store";
 import { Link } from "react-router-dom";
+import ProfileDropDown from "./ProfileDropDown";
 
 const Header = ({ progress, setProgress }) => {
   const { bagItemsList, setSearch } = useMyntra();
@@ -46,25 +47,7 @@ const Header = ({ progress, setProgress }) => {
         <div className="action_container dropdown">
           <IoPersonSharp />
           <span className="action_name">Profile</span>
-          <div className="dropdown-content">
-            <p>Hello Aiman</p>
-            <p>6574834848</p>
-            <hr />
-            <p>Orders</p>
-            <p>Wishlist</p>
-            <p>Gift Cards</p>
-            <p>Contact Us</p>
-            <p>Myntra InsiderNew</p>
-            <hr />
-            <p>Myntra Credit</p>
-            <p>Coupons</p>
-            <p>Saved Cards</p>
-            <p>Saved VPA</p>
-            <p>Saved Addresses</p>
-            <hr />
-            <p>Edit Profile</p>
-            <p>Logout</p>
-          </div>
+          <ProfileDropDown />
         </div>
 
         <Link

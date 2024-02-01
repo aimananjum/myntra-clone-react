@@ -5,7 +5,7 @@ export const MyntraContext = createContext({
   itemsList: [],
   bagItemsList: [],
   wishlistItemsList: [],
-
+  empty: () => {},
   addItem: () => {},
   deleteItem: () => {},
   addWishlist: () => {},
@@ -31,6 +31,10 @@ const MyntraProvider = ({ children }) => {
     setWishlistItemsList((prevWishlistItems) => [item, ...prevWishlistItems]);
   };
 
+  const empty = () => {
+    setBagItemsList((prevBagItems) => []);
+    setWishlistItemsList((prevWishlistItems) => []);
+  };
   const deleteItem = (itemId) => {
     // Remove item from bag
     setBagItemsList((prevBagItems) =>
@@ -57,6 +61,7 @@ const MyntraProvider = ({ children }) => {
         setSearch,
         session,
         setSession,
+        empty,
       }}
     >
       {children}

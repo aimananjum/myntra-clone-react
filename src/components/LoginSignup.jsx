@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMyntra } from "../store/items-list-store";
-import Header from "./Header";
 import OTPInput from "./OTPInput";
 
 const LoginSignup = () => {
@@ -23,7 +22,7 @@ const LoginSignup = () => {
   };
   const onOtpSubmit = (otp) => {
     console.log("Login Successfull", otp);
-    if (otp === "1234") {
+    if (otp.length === 4) {
       setSession(true);
     } else {
       setSession(false);

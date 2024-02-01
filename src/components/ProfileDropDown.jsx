@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useMyntra } from "../store/items-list-store";
 
 const ProfileDropDown = () => {
+  const { setSession, empty } = useMyntra();
+  const navigate = useNavigate();
   return (
     <div className="dropdown-content">
       <div className="user-details">
@@ -30,7 +33,16 @@ const ProfileDropDown = () => {
       <p>Saved Addresses</p>
       <hr />
       <p>Edit Profile</p>
-      <p>Logout</p>
+      <p
+        className="logout"
+        onClick={() => {
+          setSession(false);
+          empty();
+          navigate("/myntra-clone-react/login-signup");
+        }}
+      >
+        Logout
+      </p>
     </div>
   );
 };
